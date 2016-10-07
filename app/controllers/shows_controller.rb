@@ -81,6 +81,11 @@ class ShowsController < ApplicationController
     end
   end
 
+  def nearby
+    distance = params[:distance] || 1
+    @shows = Show.within(distance, :units => :kms, :origin => [params[:lat], params[:lng]])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_show

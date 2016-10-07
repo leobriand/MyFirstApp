@@ -56,4 +56,6 @@ gem "twitter-bootstrap-rails"
 
 gem 'rack-cors', :require => 'rack/cors'
 
+gem 'geokit-rails'
+
 
